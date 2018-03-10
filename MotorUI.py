@@ -5,7 +5,7 @@
 # Author: Ankur
 # Project: RPi Motor Shield
 
-import tkinter as tkinter
+import Tkinter as tkinter
 import PiMotor
 
 m1 = PiMotor.Motor("MOTOR1",1)
@@ -17,6 +17,8 @@ ab = PiMotor.Arrow(1)
 al = PiMotor.Arrow(2)
 af = PiMotor.Arrow(3) 
 ar = PiMotor.Arrow(4)
+
+print("Running script")
 
 def Start(check):
     print (check)
@@ -127,7 +129,6 @@ window.configure(background="#383a39")
 frame = tkinter.Frame(window)
 frame.pack(fill='both',expand='1')
 
-
 polygon1 = [(5,40, 80,40, 80,20, 110,50, 80,80, 80,60, 5,60)]
 polygon2 = [(193,40, 118,40, 118,20, 88,50, 118,80, 118,60, 193,60)]
 polygon3 = [(45,210, 45,140, 25,140, 55,95, 85,140, 65,140, 65,210)]
@@ -207,3 +208,4 @@ tkinter.Radiobutton(frame,highlightthickness=0,text="Forward", variable=var4,val
 tkinter.Radiobutton(frame,highlightthickness=0,text="Backward", variable=var4,value=2).place(x=550,y=445)
 w4 = tkinter.Spinbox(width=5,values=(100,90,80,70,60,50,40,30,20,10))
 w4.place(x=565,y=480)
+window.mainloop()
