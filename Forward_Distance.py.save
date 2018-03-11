@@ -4,6 +4,7 @@ import RPi.GPIO as GPIO
 
 #Name of Individual MOTORS 
 m1 = PiMotor.Motor("MOTOR1",1)
+
 m2 = PiMotor.Motor("MOTOR2",1)
 m3 = PiMotor.Motor("MOTOR3",1)
 m4 = PiMotor.Motor("MOTOR4",1)
@@ -21,13 +22,12 @@ ar = PiMotor.Arrow(4)
 ## forward and reverse takes speed in percentage(0-100)
 
 try:
-   while True:
+    while True:
 #-----------To Drive the Motors Forward------------# 
-	print("Robot Moving Forward ")
+        print("Robot Moving Forward ")
         af.on()
         motorAll.forward(100)
         time.sleep(5)
-	GPIO.cleanup()
 #--------------------------------------------------#
         
 except KeyboardInterrupt:
