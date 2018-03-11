@@ -26,6 +26,7 @@ try:
         print("Robot Moving Forward ")
         af.on()
         motorAll.forward(100)
+        time.sleep(5)
 #--------------------------------------------------#
         
 except KeyboardInterrupt:
