@@ -1,6 +1,7 @@
 import PiMotor
 import time
 import RPi.GPIO as GPIO
+import cv2
 
 #Name of Individual MOTORS 
 m1 = PiMotor.Motor("MOTOR1",1)
@@ -26,9 +27,7 @@ try:
 	print("Robot Moving Forward ")
         af.on()
         motorAll.forward(100)
-        time.sleep(5)
-	GPIO.cleanup()
+	time.sleep(5)
 #--------------------------------------------------#
-        
 except KeyboardInterrupt:
     GPIO.cleanup()
